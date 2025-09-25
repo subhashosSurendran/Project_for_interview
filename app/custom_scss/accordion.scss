@@ -1,0 +1,72 @@
+.main_button_section{
+     background-color: #0a1a2f;
+.crypto-faq-container {
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+  background: #3a4a4f;
+
+
+  .crypto-faq-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #fff;
+      margin-top: 1rem;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .faq-list {
+    background-color: #1f3540;
+    border-radius: 15px;
+    overflow: hidden;
+
+    .faq-item {
+      border-bottom: 1px solid #3d5863;
+      cursor: pointer;
+      padding: 1.2rem 1.5rem;
+      transition: background 0.3s;
+      background: #5E767F;
+
+      .faq-question {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #000;
+
+        .icon {
+          margin-right: 10px;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+
+      .faq-answer {
+        margin-top: 0.8rem;
+        font-size: 0.95rem;
+        color: #000;
+        line-height: 1.5;
+      }
+
+      &.open {
+        background: #5E767F;
+      }
+    }
+  }
+}
+}
