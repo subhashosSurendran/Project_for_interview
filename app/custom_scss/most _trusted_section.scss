@@ -1,8 +1,9 @@
 .crypto-section {
   background: #0a1a2f; // Dark background
-  color:#E9EDF8;;
+  color: #E9EDF8;
   text-align: center;
   padding: 60px 20px;
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -29,26 +30,103 @@
     flex-wrap: wrap;
 
     .image-card {
-      background: #0f223a;
+      background: #0a1a2f;
       border-radius: 12px;
       overflow: hidden;
       max-width: 300px;
-      flex: 1;
+      flex: 1 1 300px;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: transform 0.3s ease;
+      position: relative;
 
       img {
         width: 100%;
         height: auto;
         display: block;
+        border-radius: 12px; // Add this for desktop and tablet
       }
+    }
 
-      &:hover {
-        transform: translateY(-8px);
+    .hover-content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -40px;
+      color: #fff;
+      padding: 12px;
+      text-align: center;
+      border-radius: 0 0 12px 12px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s, transform 0.7s;
+
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
+        bottom: 0;
       }
     }
   }
+}
+
+.hover-content h4 {
+  font-size: 1.5rem; // Increase this value for larger text
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+// Responsive styles
+@media (max-width: 900px) {
+  .crypto-section .image-row {
+    gap: 12px;
+    .image-card {
+      max-width: 220px;
+      flex: 1 1 450px;
+          margin-bottom: 15px !important;
+      
+    }
   }
+  .crypto-section .title {
+    font-size: 22px;
+  }
+  .crypto-section .subtitle {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .crypto-section {
+    padding: 0;
+    .title {
+      font-size: 18px;
+    }
+    .subtitle {
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    .image-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      .image-card {
+        max-width: 350px; // Reduced width
+        width: 90vw;      // Responsive width, not full screen
+        border-radius: 0;
+        margin: 0 auto;
+        img {
+          width: 90vw;        // Reduced width
+          max-width: 350px;   // Limit max width
+          height: auto;
+          display: block;
+          border-radius: 12px; // Add border radius for mobile too
+        }
+      }
+    }
+    .hover-content h4 {
+      font-size: 1.2rem;
+    }
+  }
+}
 

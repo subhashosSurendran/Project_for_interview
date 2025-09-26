@@ -15,22 +15,37 @@ const CardSlider = () => {
     dots: false,
     arrows: false,
     infinite: true,
-    centerMode: true, 
-    centerPadding: '10px', 
+    centerMode: true,
+    centerPadding: '10px',
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,        
+    autoplaySpeed: 1000,      
+    initialSlide: 0, // Add this line
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
         },
       },
     ],
