@@ -1,3 +1,4 @@
+"use client";
 import "../custom_scss/home_banner.scss";
 import React from "react";
 
@@ -8,7 +9,14 @@ const HomeBanner = () => {
         <div className="banner-content">
           <h1>
             Ultrices ut etiam vulputate ante congue <br />
-            jokichn na <span>Lorem Ipsum</span>
+            jokichn na{" "}
+            <span className="rotating-text-container">
+              <span className="rotating-text">
+                <span>Lorem Ipsum</span>
+                <span>Dolor Sit Amet</span>
+                <span>Lorem Ipsum</span> {/* repeat first for seamless loop */}
+              </span>
+            </span>
           </h1>
 
           <div className="banner-buttons">
@@ -16,8 +24,6 @@ const HomeBanner = () => {
             <button className="btn secondary">Watch Video</button>
           </div>
         </div>
-
-        {/* Floating Labels */}
       </div>
     </section>
   );
